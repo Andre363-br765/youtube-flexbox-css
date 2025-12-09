@@ -1,0 +1,36 @@
+/* ==============================
+   RESET BÁSICO
+============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==============================
+   ACESSIBILIDADE
+============================== */
+:focus {
+    outline: 2px solid #1a73e8;
+    outline-offset: 3px;
+}
+
+.sr-only {
+    position: absolute;
+    left: -9999px;
+}

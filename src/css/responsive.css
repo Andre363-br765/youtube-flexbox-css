@@ -1,4 +1,36 @@
-@import url("./src/css/reset.css");
-@import url("./src/css/variables.css");
-@import url("./src/css/layout.css");
-@import url("./src/css/responsive.css");
+/* ==============================
+   RESPONSIVO
+============================== */
+
+@media (max-width: 1100px) {
+    #main-layout {
+        flex-direction: column;
+        padding-top: 80px;
+    }
+
+    #sidebar-right {
+        width: 100%;
+    }
+
+    #content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    #header {
+        padding: 0 8px;
+    }
+
+    .header-center {
+        display: none; /* igual YouTube no mobile */
+    }
+
+    #main-layout {
+        padding: 80px 12px;
+    }
+
+    .recommended-video {
+        flex-direction: row;
+    }
+}

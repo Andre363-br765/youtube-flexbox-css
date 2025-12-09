@@ -1,0 +1,18 @@
+/* ==============================
+   VARIÁVEIS GLOBAIS
+============================== */
+:root {
+    --font-main: Arial, sans-serif;
+
+    --color-bg: #f9f9f9;
+    --color-text: #0f0f0f;
+    --color-border: #ddd;
+    --color-light: #f1f1f1;
+    --color-light-2: #f2f2f2;
+
+    --color-yt-red: #cc0000;
+
+    --header-height: 56px;
+    --sidebar-width: 360px;
+    --content-width: 860px;
+}

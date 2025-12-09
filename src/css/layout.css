@@ -1,0 +1,221 @@
+/* ==============================
+   LAYOUT GERAL
+============================== */
+body {
+    font-family: var(--font-main);
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+#main-layout {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: calc(var(--header-height) + 34px) 24px 24px;
+}
+
+/* ==============================
+   HEADER (YOUTUBE 2017/2018)
+============================== */
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--header-height);
+    background: #ffffff;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    z-index: 1000;
+}
+
+.header-left,
+.header-center,
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* logo */
+#logo {
+    width: 95px;
+}
+
+/* Campo de pesquisa */
+.header-center {
+    flex: 1;
+    max-width: 620px;
+}
+
+#search-bar {
+    flex: 1;
+    height: 34px;
+    border: 1px solid #ccc;
+    padding: 0 8px;
+    font-size: 14px;
+}
+
+#search-button {
+    width: 60px;
+    height: 34px;
+    background: #f8f8f8;
+    border: 1px solid #ccc;
+}
+
+/* Ícones do lado direito */
+.header-right button {
+    font-size: 20px;
+}
+
+/* Avatar usuário */
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+/* ==============================
+   PLAYER E CONTEÚDO
+============================== */
+#content {
+    width: var(--content-width);
+}
+
+/* player */
+#video-player {
+    width: 100%;
+    background: #000;
+    aspect-ratio: 16/9;
+    margin-bottom: 16px;
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Título do vídeo */
+#video-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* ==============================
+   INFORMAÇÕES DO CANAL
+============================== */
+#channel-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+}
+
+.channel-avatar img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.channel-details {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+/* Botões */
+.video-actions {
+    margin-left: auto;
+    display: flex;
+    gap: 12px;
+}
+
+.video-actions button {
+    padding: 8px 12px;
+    border: 1px solid var(--color-border);
+    background: var(--color-light);
+    font-size: 13px;
+}
+
+/* Botão inscrever */
+.subscribe-button {
+    background: var(--color-yt-red);
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+/* ==============================
+   ESTATÍSTICAS
+============================== */
+.video-stats {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+/* ==============================
+   DESCRIÇÃO DO VÍDEO
+============================== */
+.video-description {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 12px;
+    background: var(--color-light-2);
+}
+
+/* ==============================
+   SIDEBAR DIREITA
+============================== */
+#sidebar-right {
+    width: var(--sidebar-width);
+}
+
+#sidebar-right h2 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+/* Lista */
+.recommended-videos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Item */
+.recommended-video {
+    display: flex;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.thumbnail img {
+    width: 168px;
+    height: 94px;
+    object-fit: cover;
+    background: #000;
+}
+
+/* textos */
+.video-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-details .video-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.video-details .video-channel,
+.video-details .video-stats {
+    font-size: 12px;
+    color: #555;
+}
