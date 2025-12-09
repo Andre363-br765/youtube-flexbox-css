@@ -10,46 +10,56 @@
 
 <body>
 
-    <!-- Cabeçalho -->
+    <!-- ============================
+         CABEÇALHO
+    ============================ -->
     <header id="header">
         <div class="header-left">
             <button id="menu-button" aria-label="Menu">&#9776;</button>
-            <img id="logo" src="./src/assets/images/logo_youtube.png" alt="">
+
+            <img id="logo" src="./src/assets/images/logo_youtube.png" alt="Logo do YouTube">
         </div>
 
         <div class="header-center">
-            <input type="text" id="search-bar" placeholder="Pesquisar">
+            <input type="text" id="search-bar" placeholder="Pesquisar" aria-label="Pesquisar vídeos">
             <button id="search-button" aria-label="Pesquisar">&#128269;</button>
         </div>
 
         <div class="header-right">
             <button id="upload-button" aria-label="Enviar vídeo">&#128247;</button>
             <button id="notifications-button" aria-label="Notificações">&#128276;</button>
+
             <img class="user-avatar" src="./src/assets/images/avatar/avatar.png" alt="Avatar do usuário">
         </div>
     </header>
 
-    <!-- Layout principal -->
+    <!-- ============================
+         LAYOUT PRINCIPAL
+    ============================ -->
     <main id="main-layout">
 
-        <!-- Coluna central: player e informações -->
+        <!-- ========== COLUNA CENTRAL ========== -->
         <section id="content">
 
-            <!-- Player de vídeo -->
-            <div id="video-player">
-                <img class="video-placeholder" src="./src/assets/images/image_dio_me.png" alt="Thumbnail do vídeo">
-            </div>
+            <!-- Player -->
+            <!-- <div id="video-player"> -->
+                <img class="video-placeholder" src="./src/assets/images/image_dio_me.png"
+                    alt="Thumbnail do vídeo em reprodução">
+            <!-- </div> -->
 
             <!-- Informações do vídeo -->
             <article id="video-info">
+
                 <h1 id="video-title">
                     Semana Front-end | Dia 01: Construindo uma Landing Page no Mundo Invertido com HTML e CSS
                 </h1>
 
                 <div id="channel-info">
+
                     <div class="channel-avatar">
                         <img src="./src/assets/images/avatar/avatar_channels.jpg" alt="Avatar do canal DIO">
                     </div>
+
                     <div class="channel-details">
                         <span class="channel-name">DIO</span>
                         <span class="channel-subscribers">83,3 mil inscritos</span>
@@ -62,6 +72,7 @@
                         <button class="share-button">Compartilhar</button>
                         <button class="download-button">Download</button>
                     </div>
+
                 </div>
 
                 <div class="video-stats">
@@ -70,67 +81,75 @@
                 </div>
 
                 <p class="video-description">
-                    Inicie uma aventura imersiva no mundo do Front-end com HTML e CSS. Para isso, criaremos uma landing
-                    page com a temática da série Stranger Things, a qual contará com a implementação de um theme
-                    switcher (light e dark) para explorarmos os mistérios do mundo invertido.
+                    Inicie uma aventura imersiva no mundo do Front-end com HTML e CSS. Para isso, criaremos uma
+                    landing page com a temática da série Stranger Things, incluindo um theme switcher para explorar
+                    os mistérios do mundo invertido.
                 </p>
+
             </article>
         </section>
 
-        <!-- Coluna direita: recomendações -->
+        <!-- ========== SIDEBAR DIREITA ========== -->
         <aside id="sidebar-right">
             <h2>Próximos vídeos</h2>
+
             <ul class="recommended-videos">
+
                 <li class="recommended-video">
                     <div class="thumbnail">
                         <img src="./src/assets/images/vidios/vidio1.png" alt="Thumbnail do vídeo 1">
                     </div>
                     <div class="video-details">
-                        <span class="video-title">Título do vídeo 1...</span>
-                        <span class="video-channel">Canal 1</span>
-                        <span class="video-stats">10 mil visualizações • 2 dias atrás</span>
+                        <span class="video-title">Geração Tech Unimed - BH - Ciência de Dados</span>
+                        <span class="video-channel">DigitalInnovationOne</span>
+                        <span class="video-stats">2,1 mil visualizações Transmitido há 2 dias</span>
                     </div>
                 </li>
+
                 <li class="recommended-video">
                     <div class="thumbnail">
                         <img src="./src/assets/images/vidios/vidio2.png" alt="Thumbnail do vídeo 2">
                     </div>
                     <div class="video-details">
-                        <span class="video-title">Título do vídeo 2...</span>
-                        <span class="video-channel">Canal 2</span>
-                        <span class="video-stats">5 mil visualizações • 1 semana atrás</span>
+                        <span class="video-title">Scrum Talks</span>
+                        <span class="video-channel">DigitalInnovationOne</span>
+                        <span class="video-stats">1,6 mil visualizações Transmitido há 3 dias</span>
                     </div>
                 </li>
+
                 <li class="recommended-video">
                     <div class="thumbnail">
                         <img src="./src/assets/images/vidios/vidio3.png" alt="Thumbnail do vídeo 3">
                     </div>
                     <div class="video-details">
-                        <span class="video-title">Título do vídeo 3...</span>
-                        <span class="video-channel">Canal 3</span>
-                        <span class="video-stats">7 mil visualizações • 3 dias atrás</span>
+                        <span class="video-title">Machine Learning Avançado - Fast Track</span>
+                        <span class="video-channel">DigitalInnovationOne</span>
+                        <span class="video-stats">1,7 mil visualizações Transmitido há 4 dias</span>
                     </div>
                 </li>
+
                 <li class="recommended-video">
                     <div class="thumbnail">
                         <img src="./src/assets/images/vidios/vidio4.png" alt="Thumbnail do vídeo 4">
                     </div>
                     <div class="video-details">
-                        <span class="video-title">Título do vídeo 4...</span>
-                        <span class="video-channel">Canal 4</span>
-                        <span class="video-stats">12 mil visualizações • 1 semana atrás</span>
+                        <span class="video-title">Global Skills #2 - Project Planning</span>
+                        <span class="video-channel">DigitalInnovationOne</span>
+                        <span class="video-stats">971 visualizações Transmitido há 5 dias</span>
                     </div>
                 </li>
+
                 <li class="recommended-video">
                     <div class="thumbnail">
                         <img src="./src/assets/images/vidios/vidio5.png" alt="Thumbnail do vídeo 5">
                     </div>
                     <div class="video-details">
-                        <span class="video-title">Título do vídeo 5...</span>
-                        <span class="video-channel">Canal 5</span>
-                        <span class="video-stats">3 mil visualizações • 2 dias atrás</span>
+                        <span class="video-title">Como aprender a programar Python do ZERO</span>
+                        <span class="video-channel">DigitalInnovationOne</span>
+                        <span class="video-stats">711 visualizações Transmitido há 6 dias</span>
                     </div>
                 </li>
+
             </ul>
         </aside>
 
