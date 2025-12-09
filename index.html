@@ -1,11 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <title>YouTube Clone</title>
 </head>
+
 <body>
-    
+
+    <!-- Cabeçalho -->
+    <header id="header">
+        <div class="header-left">
+            <button id="menu-button" aria-label="Menu">&#9776;</button>
+            <img id="logo" src="./src/assets/images/logo_youtube.png" alt="">
+        </div>
+
+        <div class="header-center">
+            <input type="text" id="search-bar" placeholder="Pesquisar">
+            <button id="search-button" aria-label="Pesquisar">&#128269;</button>
+        </div>
+
+        <div class="header-right">
+            <button id="upload-button" aria-label="Enviar vídeo">&#128247;</button>
+            <button id="notifications-button" aria-label="Notificações">&#128276;</button>
+            <img class="user-avatar" src="./src/assets/images/avatar/avatar.png" alt="Avatar do usuário">
+        </div>
+    </header>
+
+    <!-- Layout principal -->
+    <main id="main-layout">
+
+        <!-- Coluna central: player e informações -->
+        <section id="content">
+
+            <!-- Player de vídeo -->
+            <div id="video-player">
+                <img class="video-placeholder" src="../src/assets/images/image_dio_me.png" alt="Thumbnail do vídeo">
+            </div>
+
+            <!-- Informações do vídeo -->
+            <article id="video-info">
+                <h1 id="video-title">
+                    Semana Front-end | Dia 01: Construindo uma Landing Page no Mundo Invertido com HTML e CSS
+                </h1>
+
+                <div id="channel-info">
+                    <div class="channel-avatar">
+                        <img src="../src/assets/images/avatar/avatar_channels.jpg" alt="Avatar do canal DIO">
+                    </div>
+                    <div class="channel-details">
+                        <span class="channel-name">DIO</span>
+                        <span class="channel-subscribers">83,3 mil inscritos</span>
+                    </div>
+
+                    <div class="video-actions">
+                        <button class="subscribe-button">INSCREVA-SE</button>
+                        <button class="like-button">&#128077; Curtir</button>
+                        <button class="dislike-button">&#128078; Não Gostei</button>
+                        <button class="share-button">Compartilhar</button>
+                        <button class="download-button">Download</button>
+                    </div>
+                </div>
+
+                <div class="video-stats">
+                    <span class="views">28.418 visualizações</span>
+                    <span class="date">Transmitido ao vivo em 23 ago. de 2022</span>
+                </div>
+
+                <p class="video-description">
+                    Inicie uma aventura imersiva no mundo do Front-end com HTML e CSS. Para isso, criaremos uma landing
+                    page com a temática da série Stranger Things, a qual contará com a implementação de um theme
+                    switcher (light e dark) para explorarmos os mistérios do mundo invertido.
+                </p>
+            </article>
+        </section>
+
+        <!-- Coluna direita: recomendações -->
+        <aside id="sidebar-right">
+            <h2>Próximos vídeos</h2>
+            <ul class="recommended-videos">
+                <li class="recommended-video">
+                    <div class="thumbnail">
+                        <img src="./src/assets/images/vidios/vidio1.png" alt="Thumbnail do vídeo 1">
+                    </div>
+                    <div class="video-details">
+                        <span class="video-title">Título do vídeo 1...</span>
+                        <span class="video-channel">Canal 1</span>
+                        <span class="video-stats">10 mil visualizações • 2 dias atrás</span>
+                    </div>
+                </li>
+                <li class="recommended-video">
+                    <div class="thumbnail">
+                        <img src="./src/assets/images/vidios/vidio2.png" alt="Thumbnail do vídeo 2">
+                    </div>
+                    <div class="video-details">
+                        <span class="video-title">Título do vídeo 2...</span>
+                        <span class="video-channel">Canal 2</span>
+                        <span class="video-stats">5 mil visualizações • 1 semana atrás</span>
+                    </div>
+                </li>
+                <li class="recommended-video">
+                    <div class="thumbnail">
+                        <img src="./src/assets/images/vidios/vidio3.png" alt="Thumbnail do vídeo 3">
+                    </div>
+                    <div class="video-details">
+                        <span class="video-title">Título do vídeo 3...</span>
+                        <span class="video-channel">Canal 3</span>
+                        <span class="video-stats">7 mil visualizações • 3 dias atrás</span>
+                    </div>
+                </li>
+                <li class="recommended-video">
+                    <div class="thumbnail">
+                        <img src="./src/assets/images/vidios/vidio4.png" alt="Thumbnail do vídeo 4">
+                    </div>
+                    <div class="video-details">
+                        <span class="video-title">Título do vídeo 4...</span>
+                        <span class="video-channel">Canal 4</span>
+                        <span class="video-stats">12 mil visualizações • 1 semana atrás</span>
+                    </div>
+                </li>
+                <li class="recommended-video">
+                    <div class="thumbnail">
+                        <img src="./src/assets/images/vidios/vidio5.png" alt="Thumbnail do vídeo 5">
+                    </div>
+                    <div class="video-details">
+                        <span class="video-title">Título do vídeo 5...</span>
+                        <span class="video-channel">Canal 5</span>
+                        <span class="video-stats">3 mil visualizações • 2 dias atrás</span>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+
+    </main>
+
 </body>
+
 </html>
