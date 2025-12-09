@@ -15,7 +15,7 @@ body {
 }
 
 /* ==============================
-   HEADER (YOUTUBE 2017/2018)
+   HEADER
 ============================== */
 #header {
     position: fixed;
@@ -137,13 +137,13 @@ body {
 .video-actions button {
     padding: 8px 12px;
     border: 1px solid var(--color-border);
-    background: var(--color-light);
+    background-color: var(--color-light);
     font-size: 13px;
 }
 
 /* Botão inscrever */
 .subscribe-button {
-    background: var(--color-yt-red);
+    background-color: var(--color-red) !important;
     color: white;
     border: none;
     font-weight: bold;
