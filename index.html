@@ -15,9 +15,9 @@
         <div class="header-left">
             <button id="menu-button" aria-label="Abrir menu lateral">&#9776;</button>
 
-            <img id="logo" 
-                 src="./src/assets/images/logo_youtube.png" 
-                 alt="Logotipo do YouTube">
+            <a href="https://www.youtube.com/">
+                <img id="logo" src="./src/assets/images/logo_youtube.png" alt="Logotipo do YouTube" loading="lazy">
+            </a>
         </div>
 
         <form class="header-center" role="search" aria-label="Buscar vídeos">
@@ -31,9 +31,8 @@
             <button id="upload-button" aria-label="Enviar vídeo">&#128247;</button>
             <button id="notifications-button" aria-label="Notificações">&#128276;</button>
 
-            <img class="user-avatar"
-                 src="./src/assets/images/avatar/avatar.png"
-                 alt="Avatar do usuário logado">
+            <img class="user-avatar" src="./src/assets/images/avatar/avatar.png" alt="Avatar do usuário logado"
+                loading="lazy">
         </nav>
     </header>
 
@@ -42,13 +41,21 @@
 
         <!-- Coluna central: player e informações -->
         <section id="content" aria-label="Reprodução do vídeo">
-   
+
             <!-- Player de vídeo -->
-            <div id="video-player">
+            <!-- <div id="video-player">
                 <img class="video-placeholder"
                      src="./src/assets/images/image_dio_me.png"
-                     alt="Player do vídeo exibindo imagem ilustrativa">
-            </div>
+                     alt="Player do vídeo exibindo imagem ilustrativa" loading="lazy">
+            </div> -->
+            <figure>
+                <iframe id="video-iframe" src="https://www.youtube.com/embed/HuEADvyhork?si=ACXgc_7V016Y4VTW"
+                    title="Vídeo: O que é CSS? Seletores e Propriedades — Guia 2023 (Getting Started #16)"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </figure>
+
 
             <!-- Informações do vídeo -->
             <article id="video-info" aria-labelledby="video-title">
@@ -59,8 +66,8 @@
 
                 <section id="channel-info" aria-label="Informações do canal">
                     <div class="channel-avatar">
-                        <img src="./src/assets/images/avatar/avatar_channels.jpg"
-                             alt="Avatar do canal DIO">
+                        <img src="./src/assets/images/avatar/avatar_channels.jpg" alt="Avatar do canal DIO"
+                            loading="lazy">
                     </div>
 
                     <div class="channel-details">
@@ -82,10 +89,16 @@
                     <span class="date">Transmitido ao vivo em 23 ago. de 2022</span>
                 </div>
 
-                <p class="video-description">
-                    Inicie uma aventura imersiva no mundo do Front-end com HTML e CSS. Para isso, criaremos uma landing
+                <!-- <p class="video-description">
+                    Inicie uma aventura imersiva no mundo do Front-end com HTML e CSS. Para isso, criaremos uma
+                    landing
                     page com a temática da série Stranger Things, a qual contará com a implementação de um theme
                     switcher (light e dark) para explorarmos os mistérios do mundo invertido.
+                </p> -->
+                <p>
+                    No vídeo de hoje, a Dri vai te responder tudo sobre a tecnologia que é responsável por deixar a web
+                    mais bonita #CSS. O que são seletores, propriedades. Quer saber tudo isso? Então fica com a gente no
+                    vídeo!
                 </p>
             </article>
         </section>
@@ -99,7 +112,7 @@
                 <li class="recommended-video">
                     <div class="thumbnail">
                         <img src="./src/assets/images/vidios/vidio1.png"
-                             alt="Geração Tech Unimed - BH - Ciência de Dados">
+                            alt="Geração Tech Unimed - BH - Ciência de Dados" loading="lazy">
                     </div>
 
                     <div class="video-details">
@@ -111,8 +124,9 @@
 
                 <li class="recommended-video">
                     <div class="thumbnail">
-                        <img src="./src/assets/images/vidios/vidio2.png"
-                             alt="Scrum Talks">
+                        <a href="https://www.youtube.com/watch?v=0kpfMxtX7M4">
+                            <img src="./src/assets/images/vidios/vidio2.png" alt="Scrum Talks" loading="lazy">
+                        </a>
                     </div>
 
                     <div class="video-details">
@@ -124,8 +138,10 @@
 
                 <li class="recommended-video">
                     <div class="thumbnail">
-                        <img src="./src/assets/images/vidios/vidio3.png"
-                             alt="Machine Learning Avançado - Fast Track">
+                        <a href="https://www.youtube.com/watch?v=Ru9AyUPSNPk">
+                            <img src="./src/assets/images/vidios/vidio3.png"
+                                alt="Machine Learning Avançado - Fast Track" loading="lazy">
+                        </a>
                     </div>
 
                     <div class="video-details">
@@ -137,8 +153,10 @@
 
                 <li class="recommended-video">
                     <div class="thumbnail">
-                        <img src="./src/assets/images/vidios/vidio4.png"
-                             alt="Global Skills #2 - Project Planning">
+                        <a href="https://www.youtube.com/watch?v=gTYMAoX_27c">
+                            <img src="./src/assets/images/vidios/vidio4.png" alt="Global Skills #2 - Project Planning"
+                                loading="lazy">
+                        </a>
                     </div>
 
                     <div class="video-details">
@@ -150,8 +168,10 @@
 
                 <li class="recommended-video">
                     <div class="thumbnail">
-                        <img src="./src/assets/images/vidios/vidio5.png"
-                             alt="Como aprender a programar Python do ZERO">
+                        <a href="https://www.youtube.com/watch?v=LWyxFrwSGoM&t=7s">
+                            <img src="./src/assets/images/vidios/vidio5.png"
+                                alt="Como aprender a programar Python do ZERO" loading="lazy">
+                        </a>
                     </div>
 
                     <div class="video-details">

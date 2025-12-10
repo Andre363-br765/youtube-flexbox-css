@@ -1,36 +1,46 @@
-/* ==============================
+/* =======================
    RESPONSIVO
-============================== */
-
-@media (max-width: 1100px) {
+======================= */
+@media (max-width: 1024px) {
     #main-layout {
         flex-direction: column;
-        padding-top: 80px;
     }
 
     #sidebar-right {
-        width: 100%;
-    }
-
-    #content {
-        width: 100%;
-    }
-}
-
-@media (max-width: 700px) {
-    #header {
-        padding: 0 8px;
-    }
-
-    .header-center {
-        display: none; /* igual YouTube no mobile */
-    }
-
-    #main-layout {
-        padding: 80px 12px;
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 0.5rem;
     }
 
     .recommended-video {
-        flex-direction: row;
+        flex-direction: column;
+        min-width: 150px;
+    }
+
+    .recommended-video .thumbnail img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    #search-bar {
+        width: 100px;
+    }
+
+    .video-actions button {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.4rem;
+    }
+
+    #main-layout {
+        padding: 0.5rem;
     }
 }

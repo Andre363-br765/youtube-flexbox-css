@@ -26,18 +26,17 @@ body {
     z-index: 1000;
 }
 
-.header-left, 
-.header-center, 
+.header-left,
+.header-center,
 .header-right {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
+/* Ajuste: imagem do logo não recebe fonte, então colocamos width */
 #logo {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #ff0000;
+    width: 120px;
 }
 
 #search-bar {
@@ -64,7 +63,7 @@ body {
 }
 
 /* =======================
-   MAIN LAYOUT (SEM MENU ESQUERDO)
+   MAIN LAYOUT
 ======================= */
 #main-layout {
     display: flex;
@@ -126,6 +125,18 @@ body {
     font-weight: bold;
 }
 
+/* Ajuste: botão INSCREVA-SE mais realista */
+.subscribe-button {
+    background-color: #cc0000 !important;
+    color: #fff;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
 .video-actions {
     display: flex;
     gap: 0.5rem;
@@ -154,7 +165,7 @@ body {
 }
 
 /* =======================
-   SIDEBAR DIREITA (RECOMENDADOS)
+   SIDEBAR DIREITA
 ======================= */
 #sidebar-right {
     flex: 1;

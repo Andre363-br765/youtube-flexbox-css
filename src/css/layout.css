@@ -1,33 +1,15 @@
-/* ==============================
-   LAYOUT GERAL
-============================== */
-body {
-    font-family: var(--font-main);
-    background: var(--color-bg);
-    color: var(--color-text);
-}
-
-#main-layout {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    padding: calc(var(--header-height) + 34px) 24px 24px;
-}
-
-/* ==============================
+/* =======================
    HEADER
-============================== */
+======================= */
 #header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: var(--header-height);
-    background: #ffffff;
-    border-bottom: 1px solid var(--color-border);
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 16px;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 
@@ -36,60 +18,69 @@ body {
 .header-right {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 0.5rem;
 }
 
-/* logo */
+/* Ajuste: imagem do logo não recebe fonte, então colocamos width */
 #logo {
-    width: 95px;
-}
-
-/* Campo de pesquisa */
-.header-center {
-    flex: 1;
-    max-width: 620px;
+    width: 120px;
 }
 
 #search-bar {
-    flex: 1;
-    height: 34px;
+    padding: 0.4rem 0.6rem;
     border: 1px solid #ccc;
-    padding: 0 8px;
-    font-size: 14px;
+    border-radius: 2px;
+    width: 200px;
 }
 
-#search-button {
-    width: 60px;
-    height: 34px;
-    background: #f8f8f8;
-    border: 1px solid #ccc;
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    padding: 0;
 }
 
-/* Ícones do lado direito */
-.header-right button {
-    font-size: 20px;
+#search-button,
+#menu-button,
+#upload-button,
+#notifications-button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
-/* Avatar usuário */
 .user-avatar {
     width: 32px;
     height: 32px;
     border-radius: 50%;
 }
 
-/* ==============================
-   PLAYER E CONTEÚDO
-============================== */
-#content {
-    width: var(--content-width);
+/* =======================
+   MAIN LAYOUT
+======================= */
+#main-layout {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
 }
 
-/* player */
-#video-player {
+/* CONTEÚDO CENTRAL */
+#content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#video-iframe {
     width: 100%;
-    background: #000;
     aspect-ratio: 16/9;
-    margin-bottom: 16px;
+    background-color: #000;
 }
 
 .video-placeholder {
@@ -98,124 +89,117 @@ body {
     object-fit: cover;
 }
 
-/* Título do vídeo */
-#video-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 12px;
+/* INFORMAÇÕES DO VÍDEO */
+#video-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-/* ==============================
-   INFORMAÇÕES DO CANAL
-============================== */
+#video-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 #channel-info {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 12px 0;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .channel-avatar img {
-    width: 42px;
-    height: 42px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
 }
 
 .channel-details {
     display: flex;
     flex-direction: column;
-    font-size: 14px;
 }
 
-/* Botões */
+.channel-name {
+    font-weight: bold;
+}
+
+/* Ajuste: botão INSCREVA-SE mais realista */
+.subscribe-button {
+    background-color: #cc0000 !important;
+    color: #fff;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
 .video-actions {
-    margin-left: auto;
     display: flex;
-    gap: 12px;
+    gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .video-actions button {
-    padding: 8px 12px;
-    border: 1px solid var(--color-border);
-    background-color: var(--color-light);
-    font-size: 13px;
-}
-
-/* Botão inscrever */
-.subscribe-button {
-    background-color: var(--color-red) !important;
-    color: white;
+    background-color: #eee;
     border: none;
-    font-weight: bold;
+    padding: 0.3rem 0.6rem;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 0.9rem;
 }
 
-/* ==============================
-   ESTATÍSTICAS
-============================== */
 .video-stats {
-    font-size: 14px;
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
     color: #555;
-    margin-bottom: 12px;
 }
 
-/* ==============================
-   DESCRIÇÃO DO VÍDEO
-============================== */
 .video-description {
-    margin-top: 8px;
-    font-size: 14px;
-    line-height: 1.5;
-    padding: 12px;
-    background: var(--color-light-2);
+    margin-top: 0.5rem;
+    line-height: 1.4;
 }
 
-/* ==============================
+/* =======================
    SIDEBAR DIREITA
-============================== */
+======================= */
 #sidebar-right {
-    width: var(--sidebar-width);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 #sidebar-right h2 {
-    font-size: 16px;
-    margin-bottom: 12px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-/* Lista */
 .recommended-videos {
+    list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 0.6rem;
 }
 
-/* Item */
 .recommended-video {
     display: flex;
-    gap: 12px;
+    gap: 0.6rem;
     cursor: pointer;
 }
 
-.thumbnail img {
-    width: 168px;
-    height: 94px;
+.recommended-video .thumbnail img {
+    width: 150px;
+    height: 84px;
     object-fit: cover;
-    background: #000;
+    border-radius: 2px;
 }
 
-/* textos */
-.video-details {
+.recommended-video .video-details {
     display: flex;
     flex-direction: column;
-}
-
-.video-details .video-title {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 4px;
-}
-
-.video-details .video-channel,
-.video-details .video-stats {
-    font-size: 12px;
-    color: #555;
+    gap: 0.2rem;
+    font-size: 0.85rem;
 }
